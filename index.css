@@ -44,6 +44,9 @@
 /* Add-Ons | Autocomplete Scrollable */
 @import url("https://raw.githack.com/CorellanStoma/Powercord/assets/Addons/autocomplete-scrollable.css");
 
+/* Add-Ons | Mention Color*/
+@import url("https://raw.githack.com/CorellanStoma/Powercord/assets/Addons/mention-color.css");
+
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||| Animated |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -155,6 +158,10 @@
     --Color007: #E4E4F0;
     --Color008: #B8B8C2;
     --Color009: #575965;
+
+/* Mention */
+
+    --Mention:  247,196,43;
 
 /* Shadow */
 
