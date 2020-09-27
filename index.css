@@ -4,7 +4,7 @@
 /*|||                                                                                               ||||||||*/
 /*||| This is the official CreArts theme created by CorellanStoma#1996                              ||||||||*/
 /*|||                                                                                               ||||||||*/
-/*||| CreArts v1.2.3 (Beta) (Guilded)                                                               ||||||||*/
+/*||| CreArts v1.2.3 (Beta) (Guilded Edition)                                                       ||||||||*/
 /*|||                                                                                               ||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -46,9 +46,6 @@
 /* Add-Ons | Windows Titlebar */
 @import url("https://corellanstoma.github.io/Powercord/Addons/windows-titlebar.css");
 
-/* Add-Ons | Mobile Home */
-/*@import url("https://corellanstoma.github.io/Powercord/Addons/mobile-home.css");*/
-
 /* Add-Ons | Mobile Menu */
 @import url("https://corellanstoma.github.io/Powercord/Addons/mobile-menu.css");
 
@@ -75,7 +72,7 @@
 @import url("https://corellanstoma.github.io/Powercord/Animated/icons-hover.css");
 
 /* Animated | Chat Highlight */
-/*@import url("https://corellanstoma.github.io/Powercord/Animated/chat-highlight.css");*/
+@import url("https://corellanstoma.github.io/Powercord/Animated/chat-highlight.css");
 
 /* Animated | Channel Highlight */
 @import url("https://corellanstoma.github.io/Powercord/Animated/channel-highlight.css");
@@ -94,7 +91,7 @@
 @import url("https://corellanstoma.github.io/Powercord/Removed/edited.css");
 
 /* Removed | Removed the Nitro home button, the nitro menu can still be accessed via the settings. */
-/* @import url("https://corellanstoma.github.io/Powercord/Removed/nitro-home.css"); */
+@import url("https://corellanstoma.github.io/Powercord/Removed/nitro-home.css");
 
 /* Removed | Removed the chat header at the beginning of the chat. */
 @import url("https://corellanstoma.github.io/Powercord/Removed/chat-header.css");
@@ -152,7 +149,7 @@
     --Color003: #373943;
     --Color004: #30323B;
     --Color005: #26272E;
-    
+
 /* Text */	
     --Color006: #FFFFFF;
     --Color007: #E4E4F0;
@@ -171,6 +168,14 @@
 
     --Radius001: 24px; /* The value should not exceed 24px. */
     --Radius002: 90px; /* The value should not exceed 90px. */
+
+/* Picture-in-oicture Opacity */
+
+    --picture-in-picture: 60%;
+
+/* Avatar Size */
+
+    --avatar-size: 60px;
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||| Blurple Recolor ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -244,6 +249,7 @@
     --text-muted: var(--Color009);
     --channels-default: var(--Color008);
     --spotify-color: var(--Color001);
+
 }
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -1041,7 +1047,7 @@
 }
 
 .clickable-2ap7je .header-2o-2hj {
-    background: transparent;
+    background: var(--Color004);
     height: 46px;
 }
 
@@ -1060,7 +1066,7 @@
     background: var(--Color004);
 	padding-bottom: 30px;
     border-radius: 0px;
-    margin-bottom: -40px;
+    margin-bottom: -30px;
 }
 
 /* Content */
@@ -1072,7 +1078,7 @@
 /* Selector */
 
 .modeSelected-1zApJ_ .content-3at_AU, .modeSelected-1zApJ_:hover .content-3at_AU {
-    background-color: var(--Color002);
+    background-color: var(--Color003);
 	border-radius: 90px;
 }
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -1119,6 +1125,9 @@
     z-index: 9;
 }
 
+.panels-j1Uci_ {
+	background: var(--Color003);
+}
 /* Profile Hover */
 
 .panels-j1Uci_ > .container-3baos1:hover button.button-14-BFJ{
@@ -1127,7 +1136,6 @@
 
 .panels-j1Uci_ > .container-3baos1 button[aria-checked="false"], .panels-j1Uci_ > .container-3baos1 button:not([role="switch"]) {
   display: none;
-  background: var(--Color005);
 }
 
 /* Game Icon */
@@ -1168,17 +1176,6 @@
 	border-radius: 90px;
 	Padding: 6px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -1304,8 +1301,6 @@
 .wrapper-2TxpI8 {
     border-radius: 24px;
 }
-
-/* Round video */
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -1981,18 +1976,16 @@ div[class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1G
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
 .pictureInPictureWindow-1B5qSe{
-
-    border-radius: 24px;
-    right: -308px;
-    top: -20px;
-    width: 240px;
-    height: 140px;
+    border-radius: var(--Radius001);
+    width: 440px;
+    height: 248px;
+    opacity: var(--picture-in-picture);
 }
 
-.media-ya5FZp {
-    -o-object-fit: contain;
-    object-fit: fill;
+.pictureInPictureWindow-1B5qSe:hover{
+        opacity: 100%;
 }
+
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -3191,6 +3184,58 @@ div[class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1G
     left: -136px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||| Modals | Add Server   ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.circleIconButton-jET_ig.selected-ugP_am {
+    color: var(--Color006);
+    background-color: var(--Color001);
+    border-radius: var(--Radius002);
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||| Modals | Search Menu   |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.theme-dark .option-96V44q:after {
+    background: none;
+}
+
+.theme-dark .option-96V44q.selected-rZcOL- {
+    background-color: var(--Color001);
+    border-radius: var(--Radius002);
+}
+
+.theme-dark .container-3ayLPN {
+    background: var(--Color004);
+    border-radius: var(--Radius001);
+    box-shadow: var(--shadow001);
+}
+
+.theme-dark .option-96V44q.selected-rZcOL-:after {
+    background: none;
+}
+
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||| Powercord | Spotify Modal ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -3207,16 +3252,6 @@ div[class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1G
     width: 236px;
 }
 
-/* Buttons */
-
-.powercord-spotify > .container-3baos1:hover button.button-14-BFJ{
-    display: block;
-}
-
-.powercord-spotify > .container-3baos1 button[aria-checked="false"], .powercord-spotify > .container-3baos1 button:not([role="switch"]) {
-    display: none;
-}
-
 /* Advanced Controls */
 
 .spotify-extra-controls {
@@ -3230,6 +3265,17 @@ div[class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1G
     width: 236px;
 }
 
+/* Buttons */
+
+.powercord-spotify > .container-3baos1:hover button.button-14-BFJ{
+    display: block;
+}
+
+.powercord-spotify > .container-3baos1 button[aria-checked="false"],
+.powercord-spotify > .container-3baos1 button:not([role="switch"]) {
+    display: none;
+}
+
 /* Seek Bar Progress */
 
 .powercord-spotify .spotify-extra-controls + .spotify-seek {
@@ -3240,7 +3286,16 @@ div[class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1G
     bottom: 70px;
 }
 
+/* Buttons */
 
+.powercord-spotify > .spotify-seek:hover button.spotify-seek-bar-progress{
+    display: block;
+}
+
+.powercord-spotify > .spotify-seek button[aria-checked="false"],
+.powercord-spotify > .spotify-seek button:not([role="switch"]) {
+    display: none;
+}
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -3276,51 +3331,3 @@ div[class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1G
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-
-
-
-
-
-
-
-
-/* Add Server */
-
-.circleIconButton-jET_ig.selected-ugP_am {
-    color: var(--Color006);
-    background-color: var(--Color001);
-    border-radius: var(--Radius002);
-}
-
-
-
-/* Search Menu */
-
-.theme-dark .option-96V44q:after {
-    background: none;
-}
-
-.theme-dark .option-96V44q.selected-rZcOL- {
-    background-color: var(--Color001);
-    border-radius: var(--Radius002);
-}
-
-.theme-dark .container-3ayLPN {
-    background: var(--Color004);
-    border-radius: var(--Radius001);
-    box-shadow: var(--shadow001);
-}
-
-.theme-dark .option-96V44q.selected-rZcOL-:after {
-    background: none;
-}
-
-
-
-
-/* Cant Write */
-
-
-
-
-
