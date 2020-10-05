@@ -4,17 +4,20 @@
 /*|||                                                                                               ||||||||*/
 /*||| This is the official CreArts theme created by CorellanStoma#1996                              ||||||||*/
 /*|||                                                                                               ||||||||*/
-/*||| CreArts v1.2.3 (Beta) (Guilded Edition)                                                       ||||||||*/
+/*||| CreArts v1.2.4 (Beta) (Guilded Edition)                                                       ||||||||*/
 /*|||                                                                                               ||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
-/* Add-Ons | Adding USRBG (made by Gibbu#1211 & Tropical#4355) */
+/* USRBG | Adds custom Avatar Banner (made by Gibbu#1211 & Tropical#4355) */
 @import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
 
-/* Add-Ons | Adding Blurple Recolor (made by mwittrien)*/
+/* Blurple Recolor | Changed the basic accent color  (made by mwittrien)*/
 @import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css");
+
+/* Settings-Icons | Adds icons to the settings menu (made by Snapperito, botato, MulverineX, AAGaming)*/
+@import url('https://raw.githack.com/Snapperito/Settings-Icons/main/source.css');
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||| Fonts ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -122,27 +125,19 @@
 @import url('https://corellanstoma.github.io/Powercord/Plugins/audioviz.css');
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-/*||| Fix ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-
-/* Plugins | Home Button Fix */
-/*@import url('https://corellanstoma.github.io/Powercord/Fix/home-button.css');*/
-
-/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||| Theme Settings |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
 .theme-dark,
-.theme-light,
 :root {
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||| Version ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
---version: "v1.2.3 (Beta) (Guilded Edition)"; /*Theme Version*/
+--version: "v1.2.4 (Beta) (Guilded Edition)"; /*Theme Version*/
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||| Settings |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -201,7 +196,19 @@
 /*||| Audioviz |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
-    --audioviz: var(--Color001);
+--audioviz: var(--Color001);
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||| SettingsIcons ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+    --settings-icon-color: var(--Color007);
+    --settings-subscriptions: var(--Color007);
+    --settings-hypesquad: var(--Color007);
+    --settings-logout: #f04747;
+    --settings-alt-focused: var(--Color007);
+    --settings-guild-premium: var(--Color007);
+    --settings-guild-delete: #f04747;
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||| Windows 10 Titlebar ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -1033,7 +1040,7 @@
 }
 
 .clickable-2ap7je .header-2o-2hj {
-    background: var(--Color004);
+    background: transparent;
     height: 46px;
 }
 
@@ -1128,6 +1135,17 @@
 .gameIcon-gg34Dz, .icon-3Oovq9 {
     border-radius: var(--Radius002);
     color: var(--Color006);
+}
+
+/* No Shaddow */
+
+.panels-j1Uci_ > .container-3baos1:last-child .nameTag-3uD-yy {
+    text-shadow: none;
+}
+
+
+.panels-j1Uci_ > .container-3baos1:last-child .avatar-SmRMf2.wrapper-3t9DeA, .panels-j1Uci_ > .container-3baos1:last-child .nameTag-3uD-yy, .panels-j1Uci_ > .container-3baos1:last-child .button-38aScr {
+    filter: none;
 }
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -3291,3 +3309,55 @@ div[class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1G
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.quickswitcher-3JagVE {
+    border-radius: var(--Radius001);
+}
+
+
+.input-2VB9rf {
+    background: var(--Color003);
+    border-radius: var(--Radius002);
+    color: var(--Color006);
+    box-shadow: none;
+    height: 50px;
+    margin-bottom: 12px;
+}
+
+.resultFocused-3aIoYe {
+    background: var(--background-modifier-selected);
+    border-radius: var(--Radius002);
+}
+
+
+.wrapper-232cHJ {
+    border-radius: var(--Radius002);
+    background: var(--Color001);
+}
+
+.scroller-zPkAnE {
+    z-index: 0;
+    margin-right: -17px;
+    margin-top: -5px;
+    max-height: 360px;
+    background-color: var(--background-secondary);
+    margin-right: 0px;
+}
+
+.result-oB0z-- {
+    padding-right: 20px;
+}
+
+
+
+/*Subscriptions*/
+
+[style^="color: rgba(255, 115, 250, 1)"], [style*=" color: rgba(255, 115, 250, 1)"], [style^="color: rgb(255, 115, 250)"], [style*=" color: rgb(255, 115, 250)"], [style^="color: #ff73fa"], [style*=" color: #ff73fa"], [style^="color: #FF73FA"], [style*=" color: #FF73FA"], [color="rgba(255, 115, 250, 1)"], [color="rgb(255, 115, 250)"], [color="#ff73fa"], [color="#FF73FA"], [style^="color: rgba(114, 137, 218, 1)"], [style*=" color: rgba(114, 137, 218, 1)"], [style^="color: rgb(114, 137, 218)"], [style*=" color: rgb(114, 137, 218)"], [style^="color: #7289da"], [style*=" color: #7289da"], [style^="color: #7289DA"], [style*=" color: #7289DA"], [color="rgba(114, 137, 218, 1)"], [color="rgb(114, 137, 218)"], [color="#7289da"], [color="#7289DA"] {
+    color: var(--Color008) !important;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.scroller-3BxosC {
+    margin-right: 8px;
+}
